@@ -855,6 +855,9 @@ const wordsList = [
     const clickedWord = element.innerText.trim(); // Get clicked word and trims whitespaces
     const detailsDiv = document.getElementById('details');
 
+    // Store the clicked element
+    lastClickedWord = element;
+
     // Find word in wordsList
     const wordData = wordsList.find(w => w.word === clickedWord);
 
@@ -1017,6 +1020,7 @@ function clearSearch() {
     document.getElementById('details').innerHTML = "";
 
 }
+
 
 
 
