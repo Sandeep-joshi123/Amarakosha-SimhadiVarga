@@ -877,15 +877,36 @@ const wordsList = [
             <img src="${wordData.image}" alt="${wordData.word}" style="max-width:200px; margin-top:10px;">
         `;
 
-        // Smooth scroll to the details div
-        detailsDiv.scrollIntoView({ behavior: 'smooth', block: 'center' });
-
     } else {
         detailsDiv.innerHTML = `<p>No data found for <strong>${clickedWord}</strong>.</p>`;
-
-        // Still scroll to show this message
-        detailsDiv.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
+
+       // Remove any old button
+          const oldBtn = document.getElementById('backToWordBtn');
+          if (oldBtn) oldBtn.remove();
+
+          // Create the "Go back" button dynamically
+            const backBtn = document.createElement('button');
+            backBtn.id = 'backToWordBtn';
+            backBtn.textContent = '⬇ Go back to word';
+            backBtn.style.cursor = 'pointer';
+            backBtn.style.display = 'block';          // Make it block-level
+            backBtn.style.margin = '10px auto';       // Center horizontally and add top/bottom margin
+            backBtn.onclick = function() {
+                if (lastClickedWord) {
+                    lastClickedWord.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    // Optional highlight
+                    lastClickedWord.style.backgroundColor = 'white';
+                    setTimeout(() => { lastClickedWord.style.backgroundColor = ''; }, 2000);
+                }
+            };
+
+            // Append the button below all content
+            detailsDiv.appendChild(backBtn);
+
+            // Scroll smoothly to the details div
+            detailsDiv.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
 }
 
   
@@ -996,6 +1017,7 @@ function clearSearch() {
     document.getElementById('details').innerHTML = "";
 
 }
+
 
 
 
