@@ -850,6 +850,7 @@ const wordsList = [
   });
   
 
+  let lastClickedWord = null; // Store reference to last clicked word
 
   function showWordDetails(element) {
     const clickedWord = element.innerText.trim(); // Get clicked word and trims whitespaces
@@ -1020,6 +1021,7 @@ function clearSearch() {
     document.getElementById('details').innerHTML = "";
 
 }
+
 
 
 
