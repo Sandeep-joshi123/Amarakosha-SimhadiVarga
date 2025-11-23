@@ -49,7 +49,7 @@ This project demonstrates how **traditional Sanskrit knowledge** can be presente
 
 ---
 
-##Updates in the site:
+## Updates in the site:
 - Enhanced the site’s search experience by enabling search functionality for words that are not highlighted(clickable). This makes it easier for users to look up any term seamlessly.
 - Based on helpful feedback from a friend, I added a convenient downward “Go Back” arrow button that returns users to the exact reading position after viewing a word’s details to maintain continuity of reading.
 
