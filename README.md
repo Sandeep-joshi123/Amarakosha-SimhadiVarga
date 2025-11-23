@@ -51,7 +51,7 @@ This project demonstrates how **traditional Sanskrit knowledge** can be presente
 
 ## 🚀 Getting Started
 
-To run the website locally:
+To run the website:
 
 ```bash
 https://sandeep-joshi123.github.io/Amarakosha-SimhadiVarga/
