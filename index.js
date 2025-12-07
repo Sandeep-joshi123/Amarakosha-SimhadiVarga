@@ -902,7 +902,20 @@ const wordsList = [
                     // Optional highlight
                     lastClickedWord.style.backgroundColor = 'white';
                     setTimeout(() => { lastClickedWord.style.backgroundColor = ''; }, 2000);
-                    detailsDiv.innerHTML = ''; // Clear details
+                    
+
+                    //clear details div after scrolling
+                    const rect = lastClickedWord.getBoundingClientRect();  //gives the position of the clicked word relative to the screen, not the whole page.
+                    const offset = 650; // adjust this value - want the word to stop 650px lower than the top of the screen
+
+                      // Scroll the page manually
+                      window.scrollTo({
+                          top: window.scrollY + rect.top - offset,
+                          behavior: 'smooth'
+                      });
+
+                      // Clear details safely
+                      detailsDiv.innerHTML = '';
 
                 }
             };
@@ -1023,6 +1036,7 @@ function clearSearch() {
     document.getElementById('details').innerHTML = "";
 
 }
+
 
 
 
