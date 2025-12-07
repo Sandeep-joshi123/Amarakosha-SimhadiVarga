@@ -902,6 +902,8 @@ const wordsList = [
                     // Optional highlight
                     lastClickedWord.style.backgroundColor = 'white';
                     setTimeout(() => { lastClickedWord.style.backgroundColor = ''; }, 2000);
+                    detailsDiv.innerHTML = ''; // Clear details
+
                 }
             };
 
@@ -1021,6 +1023,7 @@ function clearSearch() {
     document.getElementById('details').innerHTML = "";
 
 }
+
 
 
 
