@@ -709,7 +709,7 @@ const wordsList = [
       word: "पक्षतिः",
       meaning: "Root of Wing",
       synonyms: ["पक्षतिः (स्त्री) - pakṣatiḥ"],
-      image: "wingRoot.png"
+      image: "wingRoot.jpg"
     },
 
     {
